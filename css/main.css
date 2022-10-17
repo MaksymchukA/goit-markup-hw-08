@@ -94,13 +94,13 @@ img {
   margin: -1px;
 }
 
-.customers, .features, .mobile-social, .auth-nav, .site-nav {
+.customers, .footer-social, .social-list, .team__list, .job-section__list, .features, .mobile-social, .auth-nav, .site-nav {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.customers__link, .form-checkbox__link, .mobile-social .link, .auth-nav .contacts, .site-nav .link, .logo {
+.customers__link, .social-item .link, .form-checkbox__link, .mobile-social .link, .auth-nav .contacts, .site-nav .link, .logo {
   text-decoration: none;
 }
 
@@ -140,7 +140,6 @@ img {
 /* navigation */
 .page-header {
   border-bottom: 1px solid #ECECEC;
-  position: relative;
 }
 
 .page-header .nav {
@@ -159,6 +158,12 @@ img {
   }
 }
 
+/* .site-nav .item {
+    margin-right: 50px;
+}
+.site-nav .item:last-child {
+    margin-right: 0;
+} */
 .site-nav {
   font-size: 40px;
   font-weight: 500;
@@ -173,7 +178,6 @@ img {
 @media screen and (min-width: 768px) {
   .site-nav {
     font-size: 14px;
-    line-height: 1.1;
     display: flex;
     margin-left: 90px;
   }
@@ -241,7 +245,6 @@ img {
 @media screen and (min-width: 768px) {
   .auth-nav {
     font-size: 12px;
-    line-height: 1.1;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -334,7 +337,7 @@ img {
   }
 }
 .mobile-social {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 .mobile-social .link {
@@ -356,6 +359,29 @@ img {
     display: none;
   }
 }
+/* 
+.item .icon-mail::before,
+.item .icon-tel::before {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+    fill: currentColor;
+}
+.icon-mail::before {
+    content: "";
+    background-image: url(../images/hw-4/icon-mail.svg);
+    width: 16px;
+    height: 12px;
+}
+.icon-tel::before {
+    content: "";
+    background-image: url(../images/hw-4/icon-tel.svg);
+    width: 10px;
+    height: 16px;
+} */
 .menu {
   display: flex;
 }
@@ -458,7 +484,7 @@ img {
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hw-4/bg-image.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-img/bg-image.jpg);
   background-color: #C4C4C4;
   background-size: cover;
   background-repeat: no-repeat;
@@ -742,6 +768,131 @@ img {
   justify-content: center;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+
+/* what are we doing - section 3 */
+.job-section {
+  padding-top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .job-section {
+    display: none;
+  }
+}
+
+.job-section__list {
+  display: flex;
+}
+
+.job-section__item + .job-section__item {
+  margin-left: 30px;
+}
+
+/* .list-job img {
+    display: block;
+} */
+.job-section__thumb {
+  position: relative;
+  /* z-index: -1; */
+}
+
+.job-section__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job-section__description {
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* our team - section 4 */
+.team {
+  background-color: #F5F4FA;
+}
+
+.team__box {
+  padding: 30px 32px;
+}
+
+.team__name {
+  color: #212121;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.team__position {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item + .team__item {
+    margin-left: 30px;
+  }
+}
+.team__item {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.social-list {
+  display: flex;
+}
+.social-list .item + .item {
+  margin-left: 10px;
+}
+
+.social-item .link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #AFB1B8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-item .link:hover, .social-item .link:focus {
+  background-color: #2196F3;
+  fill: #FFFFFF;
+}
+
+.footer-social {
+  display: flex;
+}
+.footer-social .link {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #FFFFFF;
+}
+.footer-social .item + .item {
+  margin-left: 10px;
 }
 
 /* regular customers - section 5 */

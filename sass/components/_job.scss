@@ -1,6 +1,10 @@
 /* what are we doing - section 3 */
 
 .job-section {
+
+@media screen and (max-width: 1199px) {
+    display: none;
+}
     padding-top: 0;
 }
 
