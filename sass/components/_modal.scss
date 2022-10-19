@@ -1,13 +1,58 @@
 .overlay {
-    max-width: 1600px;
-    min-height: 600px;
+    max-width: 767px;
+    min-height: 400px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/bg-image.jpg);
+    background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/mobile-bgi.jpg);
     background-color: $overlay-bcg-color;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+
+@media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .overlay {
+      background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/mobile-bgi@2x.jpg);
+    }
+  }
+
+
+@media screen and (min-width: 768px) {
+    .overlay {
+        max-width: 1199px;
+        background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/tablet-bgi.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .overlay {
+      background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/tablet-bgi@2x.jpg);
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .overlay {
+        max-width: 1600px;
+        min-height: 600px;
+        background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/desktop-bgi.jpg);
+    }
+    
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .overlay {
+      background-image: linear-gradient($overlay-linear-gradient), url(../images/background-img/desktop-bgi@2x.jpg);
+    }
+  }
 }
 
 .backdrop {
