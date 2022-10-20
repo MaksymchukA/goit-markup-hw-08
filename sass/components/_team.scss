@@ -86,3 +86,10 @@
         margin-bottom: 0;
     }
 }
+
+
+@media screen and (max-width: 479px) {
+    .team__box {
+        padding: 24px 40px;
+    }
+}

@@ -3,6 +3,17 @@
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .footer-mobile {
+        margin-bottom: 60px;
+    }
 }
 
 .footer-contacts {
@@ -11,7 +22,11 @@
     @extend %list;
 
     & .item:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 8px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 9px;
+        }
     }
 
     & .contacts {
@@ -41,14 +56,34 @@
     }
 }
 
-.footer-flex {
-    display: flex;
-    align-items: baseline;
+
+@media screen and (min-width: 768px) {
+    .footer-tablet {
+        display: flex;
+        align-items: baseline;
+        
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 60px;
+            justify-content: space-around;
+        } 
+    }
 }
 
-.footer-div {
-    margin-left: 70px;
+@media screen and (min-width: 1200px) {
+    .footer-desktop {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }  
 }
+
+
+@media screen and (min-width: 1200px) {
+    .footer-join {
+        margin-left: 70px;
+    }
+}
+
 
 .join {
     text-transform: uppercase;
@@ -57,12 +92,10 @@
     margin-bottom: 20px;
 }
 
-.footer-send {
-    margin-left: auto;
-}
-
-.footer-form {
-    display: flex;
+@media screen and (min-width: 1200px) {
+    .footer-form {
+        display: flex;
+    }
 }
 
 .icon-send {
@@ -70,7 +103,6 @@
 }
 
 .footer-input {
-    width: 358px;
     height: 50px;
     outline: none;
     border: $border-footer-input;
@@ -80,7 +112,26 @@
     padding: 15px 16px;
     color: $bcg-primary-color;
 
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+
     transition: border $transition-duration $transition-timing-function;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    } 
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
 
     &::placeholder {
         font-size: 16px;

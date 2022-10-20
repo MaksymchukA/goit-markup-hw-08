@@ -31,6 +31,10 @@
 .footer-social {
     display: flex;
 
+    @media screen and (max-width: 1199px) {
+        justify-content: center;
+    }
+
     @extend %list;
 
     & .link {
@@ -40,5 +44,11 @@
 
     & .item + .item {
         margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .social-list {
+        justify-content: center;
     }
 }
