@@ -168,18 +168,15 @@
 
 @media screen and (max-width: 479px) {
     .form {
-        padding: 25px 15px;
-    }
-
-    .form-checkbox__check {
-        margin-bottom: 20px;
+        padding: 42px 15px;
     }
 
     .form-checkbox__text {
         font-size: 8px;
   }
 
-    .form-field__textarea {
-        height: 86px;
-    }
+    .form-checkbox__link::after {
+        bottom: 2px;;
+    
+    } 
 }
