@@ -91,7 +91,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    overflow-y: auto;
+    @media screen and (max-width: 479px) {
+        overflow-y: auto;
+}
 
     @media screen and (min-width: 1200px) {
         width: 528px;

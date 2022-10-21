@@ -21,6 +21,7 @@
 
 }
 
+
 .menu {
     display: flex;
 }
@@ -335,16 +336,6 @@
     height: 16px;
 } */
 
-
-.menu {
-    display: flex;
-}
-  
-  @media (max-width: 767px) {
-    .menu {
-      display: none;
-    }
-  }
   
   .menu-toggle {
     min-height: 40px;
@@ -387,8 +378,7 @@
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
 
-    overflow: scroll;
- }
+}
   
   .menu-container.is-open {
     transform: translateX(0);
