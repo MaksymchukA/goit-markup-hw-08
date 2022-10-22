@@ -92,7 +92,10 @@
     transform: translate(-50%, -50%);
 
     @media screen and (max-width: 479px) {
-        overflow-y: auto;
+      width: 300px;
+      max-height: 80vh;
+      
+      overflow-y: auto;
 }
 
     @media screen and (min-width: 1200px) {
@@ -100,6 +103,8 @@
         height: 581px;
     }
 }
+
+
 
 .close-button {
     position: absolute;
@@ -126,9 +131,3 @@
     }
 }
 
-@media screen and (max-width: 479px) {
-  .modal {
-    width: 300px;
-    max-height: 80vh;
-  }
-}

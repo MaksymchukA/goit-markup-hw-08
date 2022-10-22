@@ -654,6 +654,8 @@ img {
 }
 @media screen and (max-width: 479px) {
   .modal {
+    width: 300px;
+    max-height: 80vh;
     overflow-y: auto;
   }
 }
@@ -684,12 +686,6 @@ img {
   border: 1px solid #2196F3;
 }
 
-@media screen and (max-width: 479px) {
-  .modal {
-    width: 300px;
-    max-height: 80vh;
-  }
-}
 .form {
   padding: 40px;
 }
